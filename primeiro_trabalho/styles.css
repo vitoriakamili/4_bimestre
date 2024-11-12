@@ -1,0 +1,159 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d427ff;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #770089;
+    color: white;
+    box-shadow: 0 2px 5px black;
+}
+
+.header .logo h1 {
+    font-size: 1.8rem;
+}
+
+.logo-livro{
+    position: absolute;
+    left: 8%;
+}
+
+.header .search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.header .sidebar-toggle button {
+    background-color: #770089;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.sidebar button {
+    color: white;
+    background-color: #333;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Books Section */
+.books-section h2, .authors-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.books-container, .authors-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens na horizontal */
+    align-items: center; /* Centraliza os itens na vertical */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin-top: 20px;
+}
+
+.book-card{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-card .price {
+    color: #2d2d2d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+/* Hover effect on cards */
+.book-card:hover{
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+}
+
+/* Footer */
+.footer {
+    background-color: #770089;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Sidebar toggle functionality */
+.sidebar.open {
+    left: 0;
+}
