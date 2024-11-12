@@ -1,0 +1,266 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eda4ff;
+    color: #333;
+}
+
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #770089;
+    color: white;
+    box-shadow: 0 3px 5px black;
+}
+
+.header .logo h1 {
+    font-size: 1.8rem;
+}
+
+.logo-livro{
+    position: absolute;
+    left: 8%;
+}
+
+.header .sidebar-toggle button {
+    background-color: #770089;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.sidebar button {
+    color: white;
+    background-color: #333;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #eda4ff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Books Section */
+.books-section h2, .authors-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.books-container, .authors-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens na horizontal */
+    align-items: center; /* Centraliza os itens na vertical */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin-top: 20px;
+}
+
+.book-card{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-card .price {
+    color: #2d2d2d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+/* Hover effect on cards */
+.book-card:hover{
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+}
+
+/* Footer */
+  
+  /* Estilos gerais do footer */
+  footer {
+    background-color: #770089;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .footer-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #3498db;
+  }
+  
+  @media (max-width: 768px) {
+    .social-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+
+/* Sidebar toggle functionality */
+.sidebar.open {
+    left: 0;
+}
+  
+  /* Container principal */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px black;
+  }
+  
+  /* Título principal */
+  .site-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Container da barra de pesquisa */
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos do campo de pesquisa */
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    outline: none; <h4>Encontre em nossa estante o que precisa para seu desenvolvimento!</h4>
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #3498db;
+  }
+  
+  /* Estilos do botão de pesquisa */
+  .search-button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .site-title {
+      font-size: 28px;
+    }
+  
+    .search-bar-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
